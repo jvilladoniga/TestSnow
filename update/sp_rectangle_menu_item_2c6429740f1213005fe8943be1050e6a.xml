@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <color>default</color>
+        <condition>gs.isLoggedIn()</condition>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>trophy</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Classification</label>
+        <order>400</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="wc_classification">c4ce4abc0f5213005fe8943be1050e79</sp_page>
+        <sp_rectangle_menu display_value="WC Header Menu">8b0bde3e0f0213005fe8943be1050ea5</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-23 10:00:17</sys_created_on>
+        <sys_id>2c6429740f1213005fe8943be1050e6a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Classification</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_2c6429740f1213005fe8943be1050e6a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-23 13:10:13</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=2c6429740f1213005fe8943be1050e6a"/>
+</record_update>

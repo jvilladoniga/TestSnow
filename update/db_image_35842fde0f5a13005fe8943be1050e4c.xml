@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>Service Portal</category>
+        <format>png</format>
+        <height>96</height>
+        <image/>
+        <name>7b6e390a0f4613005fe8943be1050e18.png</name>
+        <size_bytes>1780</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-28 11:11:13</sys_created_on>
+        <sys_id>35842fde0f5a13005fe8943be1050e4c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>7b6e390a0f4613005fe8943be1050e18.png</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>db_image_35842fde0f5a13005fe8943be1050e4c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-28 11:11:22</sys_updated_on>
+        <thumbnail/>
+        <width>96</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#d4299</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <image_height>96</image_height>
+        <image_width>96</image_width>
+        <size_bytes>1780</size_bytes>
+        <size_compressed>1803</size_compressed>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-28 11:11:22</sys_created_on>
+        <sys_id>5e946b5e0f5a13005fe8943be1050ed7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-28 11:11:22</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>35842fde0f5a13005fe8943be1050e4c</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="5e946b5e0f5a13005fe8943be1050ed7">5e946b5e0f5a13005fe8943be1050ed7</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-28 11:11:22</sys_created_on>
+        <sys_id>9e946b5e0f5a13005fe8943be1050ed7</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2392</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="5e946b5e0f5a13005fe8943be1050ed7">5e946b5e0f5a13005fe8943be1050ed7</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-28 11:11:22</sys_created_on>
+        <sys_id>12946b5e0f5a13005fe8943be1050ed8</sys_id>
+    </sys_attachment_doc>
+</record_update>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_13283_mundial_bets" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>paid</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>c8a054fb0fa653005fe8943be1050ecb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>bettor</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>90a054fb0fa653005fe8943be1050ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>bettor.email</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>14a054fb0fa653005fe8943be1050ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>total_points</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>94a054fb0fa653005fe8943be1050ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>favourite_1</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>18a054fb0fa653005fe8943be1050ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>favourite_2</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>98a054fb0fa653005fe8943be1050ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>outsider_1</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>1ca054fb0fa653005fe8943be1050ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>outsider_2</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>9ca054fb0fa653005fe8943be1050ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>underdog_1</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>10a054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>underdog_2</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>90a054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>latest_odd_1</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>14a054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>latest_odd_2</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>11</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>94a054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>top_scorer_team</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>12</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>18a054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>least_scorer_team</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>13</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>98a054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>most_scored_team</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>14</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>1ca054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>least_scored_team</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>15</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>9ca054fb0fa653005fe8943be1050ecd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>team_of_the_top_scorer_player</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>16</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>10a054fb0fa653005fe8943be1050ece</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>team_with_more_cards</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>17</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>90a054fb0fa653005fe8943be1050ece</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>team_with_less_cards</element>
+            <list_id display_value="x_13283_mundial_bets" element="NULL" name="x_13283_mundial_bets" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">00a054fb0fa653005fe8943be1050ecb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>18</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_id>14a054fb0fa653005fe8943be1050ece</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_13283_mundial_bets</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 21:51:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>00a054fb0fa653005fe8943be1050ecb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_13283_mundial_bets</sys_name>
+            <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+            <sys_update_name>sys_ui_list_x_13283_mundial_bets_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 21:51:50</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

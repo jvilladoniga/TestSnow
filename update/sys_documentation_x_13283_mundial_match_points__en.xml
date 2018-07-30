@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="" label="Match Points" language="en" table="x_13283_mundial_match_points">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Match Points</label>
+            <language>en</language>
+            <name>x_13283_mundial_match_points</name>
+            <plural>Match Points</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-05-16 07:03:49</sys_created_on>
+            <sys_id>53d8f8e20f0653005fe8943be1050e9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Match Points</sys_name>
+            <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+            <sys_update_name>sys_documentation_x_13283_mundial_match_points__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-05-16 07:03:49</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

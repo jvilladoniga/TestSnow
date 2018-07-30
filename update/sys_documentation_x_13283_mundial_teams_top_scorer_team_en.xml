@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="top_scorer_team" label="Top scorer team" language="en" table="x_13283_mundial_teams">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>top_scorer_team</element>
+            <help/>
+            <hint/>
+            <label>Top scorer team</label>
+            <language>en</language>
+            <name>x_13283_mundial_teams</name>
+            <plural>Top scorer teams</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-05-15 21:00:07</sys_created_on>
+            <sys_id>8cbe261e0fce13005fe8943be1050e82</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Top scorer team</sys_name>
+            <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+            <sys_update_name>sys_documentation_x_13283_mundial_teams_top_scorer_team_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-05-15 21:00:07</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

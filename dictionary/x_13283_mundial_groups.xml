@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Groups" max_length="40" name="x_13283_mundial_groups" type="collection">
+        <element label="Round of 16  - Team 1" max_length="32" name="match_a" reference="x_13283_mundial_matches" type="reference"/>
+        <element label="Round of 16 - Team 2" max_length="32" name="match_b" reference="x_13283_mundial_matches" type="reference"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <index name="index">
+            <element name="match_b"/>
+        </index>
+        <index name="index2">
+            <element name="match_a"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Teams" max_length="40" name="x_13283_mundial_teams" type="collection">
+        <element label="Bet Group" max_length="32" name="bet_group" reference="x_13283_mundial_bet_groups" type="reference"/>
+        <element default="0" label="Cards coefficient" max_length="20" name="cards_coefficient" type="decimal"/>
+        <element default="0" label="Draw Matches" max_length="40" name="draw_matches" type="integer"/>
+        <element label="Flag" max_length="40" name="flag" type="user_image"/>
+        <element default="0" label="Goals Conceded" max_length="40" name="goals_conceded" type="integer"/>
+        <element default="0" label="Goals Conceded coefficient" max_length="20" name="goals_conceded_coefficient" type="decimal"/>
+        <element default="0" label="Goals Scored" max_length="40" name="goals_scored" type="integer"/>
+        <element default="0" label="Goals Scored coefficient" max_length="20" name="goals_scored_coefficient" type="decimal"/>
+        <element default="0" label="Goal difference" max_length="20" name="goal_difference" type="decimal"/>
+        <element label="Group" max_length="32" name="group" reference="x_13283_mundial_groups" type="reference"/>
+        <element default="0" label="Group Points" max_length="40" name="group_points" type="integer"/>
+        <element default="0" label="Group Position" max_length="40" name="group_position" type="integer"/>
+        <element label="Least scored team" max_length="40" name="least_scored_team" type="boolean"/>
+        <element label="Least scorer team" max_length="40" name="least_scorer_team" type="boolean"/>
+        <element default="0" label="Lost Matches" max_length="40" name="lost_matches" type="integer"/>
+        <element label="Most scored team" max_length="40" name="most_scored_team" type="boolean"/>
+        <element display="true" label="Name" max_length="80" name="name" type="string"/>
+        <element default="0" label="Points" max_length="20" name="points" type="decimal"/>
+        <element default="0" label="Red Cards" max_length="40" name="red_cards" type="integer"/>
+        <element label="Team of the top scorer player" max_length="40" name="team_of_the_top_scorer_player" type="boolean"/>
+        <element label="Team with less cards" max_length="40" name="team_with_less_cards" type="boolean"/>
+        <element label="Team with more cards" max_length="40" name="team_with_more_cards" type="boolean"/>
+        <element label="Top scorer team" max_length="40" name="top_scorer_team" type="boolean"/>
+        <element default="0" label="Total Cards" max_length="40" name="total_cards" type="integer"/>
+        <element default="0" label="Total Matches" max_length="40" name="total_matches" type="integer"/>
+        <element default="0" label="Won Matches" max_length="40" name="won_matches" type="integer"/>
+        <index name="index">
+            <element name="bet_group"/>
+        </index>
+        <index name="index2">
+            <element name="group"/>
+        </index>
+    </element>
+</database>

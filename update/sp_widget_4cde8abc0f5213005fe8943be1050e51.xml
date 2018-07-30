@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>classification</id>
+        <internal>false</internal>
+        <link/>
+        <name>WC Classification</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  var vData = [];
+	var i = 1;
+	var grPoints = new GlideRecord('x_13283_mundial_bets');
+	grPoints.orderByDesc('total_points');
+	grPoints.query();
+	while(grPoints.next()){
+		var vPosition = {};
+		vPosition.position = i;
+		vPosition.user = grPoints.bettor.name.toString();
+		vPosition.points = grPoints.total_points.toString();
+		vPosition.id = grPoints.sys_id.toString();
+		vData.push(vPosition);
+		i++;
+	}
+	data.ranks = vData;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-23 13:05:40</sys_created_on>
+        <sys_id>4cde8abc0f5213005fe8943be1050e51</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>WC Classification</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sp_widget_4cde8abc0f5213005fe8943be1050e51</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-13 21:55:16</sys_updated_on>
+        <template><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <div class="table-responsive">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>POSITION</th>
+        <th>USER</th>
+        <th>POINTS</th>
+        <th>BET</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--<div ng-repeat="rank in data.ranks">-->
+      <tr ng-repeat="rank in data.ranks">
+        <td>{{::rank.position}}</td>
+        <td>{{::rank.user}}</td>
+        <td>{{::rank.points}}</td>
+        <td><a href="world_cup?id=wc_player_teams&sys_id={{::rank.id}}">Link</a></td>
+      </tr>
+      <!--</div>-->
+    </tbody>
+  </table>
+</div>]]></template>
+    </sp_widget>
+</record_update>

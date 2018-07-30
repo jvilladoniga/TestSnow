@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>wc_my_teams</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-22 16:34:15</sys_created_on>
+        <sys_id>a9f471680f9653005fe8943be1050e7b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>wc_my_teams</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sp_page_a9f471680f9653005fe8943be1050e7b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-23 14:48:09</sys_updated_on>
+        <title>WC My Teams</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=a9f471680f9653005fe8943be1050e7b"/>
+</record_update>

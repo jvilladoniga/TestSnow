@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+	var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>wc-player-teams</id>
+        <internal>false</internal>
+        <link/>
+        <name>WC Player Teams</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[	var vData = [];
+	data.sys_id = $sp.getParameter("sys_id");
+	var grBet = new GlideRecord('x_13283_mundial_bets');
+	grBet.addQuery('sys_id', data.sys_id);
+	grBet.query();
+	if (grBet.next()){
+		var vBet = {};
+		    vBet.user = grBet.bettor.getDisplayValue();
+			vBet.favourite_1 = grBet.favourite_1.name.toString();
+			vBet.favourite_2 = grBet.favourite_2.name.toString();
+			vBet.favourite_1_sys_id = grBet.favourite_1.toString();
+			vBet.favourite_2_sys_id = grBet.favourite_2.toString();
+			vBet.favourite_1_goals_scored = grBet.favourite_1.goals_scored.toString();
+			vBet.favourite_2_goals_scored = grBet.favourite_2.goals_scored.toString();
+			vBet.favourite_1_goals_conceded = grBet.favourite_1.goals_conceded.toString();
+			vBet.favourite_2_goals_conceded = grBet.favourite_2.goals_conceded.toString();
+			vBet.favourite_1_total_cards = grBet.favourite_1.total_cards.toString();
+			vBet.favourite_2_total_cards = grBet.favourite_2.total_cards.toString();
+			vBet.favourite_1_red_cards = grBet.favourite_1.red_cards.toString();
+			vBet.favourite_2_red_cards = grBet.favourite_2.red_cards.toString();
+			vBet.favourite_1_points = grBet.favourite_1.points.toString();
+			vBet.favourite_2_points = grBet.favourite_2.points.toString();
+			vBet.favourite_1_total_matches = grBet.favourite_1.total_matches.toString();
+			vBet.favourite_2_total_matches = grBet.favourite_2.total_matches.toString();
+			vBet.favourite_1_won_matches = grBet.favourite_1.won_matches.toString();
+			vBet.favourite_2_won_matches = grBet.favourite_2.won_matches.toString();
+			vBet.favourite_1_draw_matches = grBet.favourite_1.draw_matches.toString();
+			vBet.favourite_2_draw_matches = grBet.favourite_2.draw_matches.toString();
+			vBet.favourite_1_lost_matches = grBet.favourite_1.lost_matches.toString();
+			vBet.favourite_2_lost_matches = grBet.favourite_2.lost_matches.toString();
+			vBet.outsider_1 = grBet.outsider_1.name.toString();
+			vBet.outsider_2 = grBet.outsider_2.name.toString();
+			vBet.outsider_1_sys_id = grBet.outsider_1.toString();
+			vBet.outsider_2_sys_id = grBet.outsider_2.toString();
+			vBet.outsider_1_goals_scored = grBet.outsider_1.goals_scored.toString();
+			vBet.outsider_2_goals_scored = grBet.outsider_2.goals_scored.toString();
+			vBet.outsider_1_goals_conceded = grBet.outsider_1.goals_conceded.toString();
+			vBet.outsider_2_goals_conceded = grBet.outsider_2.goals_conceded.toString();
+			vBet.outsider_1_total_cards = grBet.outsider_1.total_cards.toString();
+			vBet.outsider_2_total_cards = grBet.outsider_2.total_cards.toString();
+			vBet.outsider_1_red_cards = grBet.outsider_1.red_cards.toString();
+			vBet.outsider_2_red_cards = grBet.outsider_2.red_cards.toString();
+			vBet.outsider_1_points = grBet.outsider_1.points.toString();
+			vBet.outsider_2_points = grBet.outsider_2.points.toString();
+			vBet.outsider_1_total_matches = grBet.outsider_1.total_matches.toString();
+			vBet.outsider_2_total_matches = grBet.outsider_2.total_matches.toString();
+			vBet.outsider_1_won_matches = grBet.outsider_1.won_matches.toString();
+			vBet.outsider_2_won_matches = grBet.outsider_2.won_matches.toString();
+			vBet.outsider_1_draw_matches = grBet.outsider_1.draw_matches.toString();
+			vBet.outsider_2_draw_matches = grBet.outsider_2.draw_matches.toString();
+			vBet.outsider_1_lost_matches = grBet.outsider_1.lost_matches.toString();
+			vBet.outsider_2_lost_matches = grBet.outsider_2.lost_matches.toString();
+			vBet.underdog_1 = grBet.underdog_1.name.toString();
+			vBet.underdog_2 = grBet.underdog_2.name.toString();
+			vBet.underdog_1_sys_id = grBet.underdog_1.toString();
+			vBet.underdog_2_sys_id = grBet.underdog_2.toString();
+			vBet.underdog_1_goals_scored = grBet.underdog_1.goals_scored.toString();
+			vBet.underdog_2_goals_scored = grBet.underdog_2.goals_scored.toString();
+			vBet.underdog_1_goals_conceded = grBet.underdog_1.goals_conceded.toString();
+			vBet.underdog_2_goals_conceded = grBet.underdog_2.goals_conceded.toString();
+			vBet.underdog_1_total_cards = grBet.underdog_1.total_cards.toString();
+			vBet.underdog_2_total_cards = grBet.underdog_2.total_cards.toString();
+			vBet.underdog_1_red_cards = grBet.underdog_1.red_cards.toString();
+			vBet.underdog_2_red_cards = grBet.underdog_2.red_cards.toString();
+			vBet.underdog_1_points = grBet.underdog_1.points.toString();
+			vBet.underdog_2_points = grBet.underdog_2.points.toString();
+			vBet.underdog_1_total_matches = grBet.underdog_1.total_matches.toString();
+			vBet.underdog_2_total_matches = grBet.underdog_2.total_matches.toString();
+			vBet.underdog_1_won_matches = grBet.underdog_1.won_matches.toString();
+			vBet.underdog_2_won_matches = grBet.underdog_2.won_matches.toString();
+			vBet.underdog_1_draw_matches = grBet.underdog_1.draw_matches.toString();
+			vBet.underdog_2_draw_matches = grBet.underdog_2.draw_matches.toString();
+			vBet.underdog_1_lost_matches = grBet.underdog_1.lost_matches.toString();
+			vBet.underdog_2_lost_matches = grBet.underdog_2.lost_matches.toString();
+			vBet.latest_odd_1 = grBet.latest_odd_1.name.toString();
+			vBet.latest_odd_2 = grBet.latest_odd_2.name.toString();
+			vBet.latest_odd_1_sys_id = grBet.latest_odd_1.toString();
+			vBet.latest_odd_2_sys_id = grBet.latest_odd_2.toString();
+			vBet.latest_odd_1_goals_scored = grBet.latest_odd_1.goals_scored.toString();
+			vBet.latest_odd_2_goals_scored = grBet.latest_odd_2.goals_scored.toString();
+			vBet.latest_odd_1_goals_conceded = grBet.latest_odd_1.goals_conceded.toString();
+			vBet.latest_odd_2_goals_conceded = grBet.latest_odd_2.goals_conceded.toString();
+			vBet.latest_odd_1_total_cards = grBet.latest_odd_1.total_cards.toString();
+			vBet.latest_odd_2_total_cards = grBet.latest_odd_2.total_cards.toString();
+			vBet.latest_odd_1_red_cards = grBet.latest_odd_1.red_cards.toString();
+			vBet.latest_odd_2_red_cards = grBet.latest_odd_2.red_cards.toString();
+			vBet.latest_odd_1_points = grBet.latest_odd_1.points.toString();
+			vBet.latest_odd_2_points = grBet.latest_odd_2.points.toString();
+			vBet.latest_odd_1_total_matches = grBet.latest_odd_1.total_matches.toString();
+			vBet.latest_odd_2_total_matches = grBet.latest_odd_2.total_matches.toString();
+			vBet.latest_odd_1_won_matches = grBet.latest_odd_1.won_matches.toString();
+			vBet.latest_odd_2_won_matches = grBet.latest_odd_2.won_matches.toString();
+			vBet.latest_odd_1_draw_matches = grBet.latest_odd_1.draw_matches.toString();
+			vBet.latest_odd_2_draw_matches = grBet.latest_odd_2.draw_matches.toString();
+			vBet.latest_odd_1_lost_matches = grBet.latest_odd_1.lost_matches.toString();
+			vBet.latest_odd_2_lost_matches = grBet.latest_odd_2.lost_matches.toString();
+			vBet.top_scorer_team = grBet.top_scorer_team.name.toString();
+			vBet.top_scorer_team_sys_id = grBet.top_scorer_team.toString();
+			vBet.top_scorer_team_top_scorer_team = grBet.top_scorer_team.top_scorer_team.toString();
+			vBet.least_scorer_team = grBet.least_scorer_team.name.toString();
+			vBet.least_scorer_team_sys_id = grBet.least_scorer_team.toString();
+			vBet.least_scorer_team_least_scorer_team = grBet.least_scorer_team.least_scorer_team.toString();
+			vBet.most_scored_team = grBet.most_scored_team.name.toString();
+			vBet.most_scored_team_sys_id = grBet.most_scored_team.toString();
+			vBet.most_scored_team_most_scored_team = grBet.most_scored_team.most_scored_team.toString();
+			vBet.least_scored_team = grBet.least_scored_team.name.toString();
+			vBet.least_scored_team_sys_id = grBet.least_scored_team.toString();
+			vBet.least_scored_team_least_scored_team = grBet.least_scored_team.least_scored_team.toString();
+			vBet.team_with_more_cards = grBet.team_with_more_cards.name.toString();
+			vBet.team_with_more_cards_sys_id = grBet.team_with_more_cards.toString();
+			vBet.team_with_more_cards_team_with_more_cards = grBet.team_with_more_cards.team_with_more_cards.toString();
+			vBet.team_with_less_cards = grBet.team_with_less_cards.name.toString();
+			vBet.team_with_less_cards_sys_id = grBet.team_with_less_cards.toString();
+			vBet.team_with_less_cards_team_with_less_cards = grBet.team_with_less_cards.team_with_less_cards.toString();
+			vBet.team_of_the_top_scorer_player = grBet.team_of_the_top_scorer_player.name.toString();
+			vBet.team_of_the_top_scorer_player_sys_id = grBet.team_of_the_top_scorer_player.toString();
+			vBet.team_of_the_top_scorer_player_team_of_the_top_scorer_player = grBet.team_of_the_top_scorer_player.team_of_the_top_scorer_player.toString();
+			vData.push(vBet);
+		}
+		data.bets = vData;
+		]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-10 14:44:17</sys_created_on>
+        <sys_id>c802572a0f2613005fe8943be1050ee4</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>WC Player Teams</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sp_widget_c802572a0f2613005fe8943be1050ee4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-10 16:40:34</sys_updated_on>
+        <template><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div ng-repeat="bet in data.bets">
+  <div class="w3-panel w3-blue-grey w3-center" style="text-transform: uppercase;">{{::bet.user}}</div> 
+  <div class="table-responsive">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>GROUP</th>
+        <th>TEAM</th>
+        <th>GOALS SCORED</th>
+        <th>GOALS CONCEDED</th>
+        <th>CARDS(TOTAL/RED)</th>
+        <th>MATCHES(T/W/D/L)</th>
+        <th>POINTS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FAVOURITES</td>
+        <td><img src='{{::bet.favourite_1_sys_id}}.png' width="15%"> <span>{{::bet.favourite_1}}</span></td>
+        <td>{{::bet.favourite_1_goals_scored}}</td>
+        <td>{{::bet.favourite_1_goals_conceded}}</td>
+        <td>{{::bet.favourite_1_total_cards}}/{{::bet.favourite_1_red_cards}}</td>
+        <td>{{::bet.favourite_1_total_matches}}/{{::bet.favourite_1_won_matches}}/{{::bet.favourite_1_draw_matches}}/{{::bet.favourite_1_lost_matches}}</td>
+        <td>{{::bet.favourite_1_points}}</td>
+      </tr>
+      <tr>
+        <td>FAVOURITES</td>
+        <td><img src='{{::bet.favourite_2_sys_id}}.png' width="15%"> <span>{{::bet.favourite_2}}</span></td>
+        <td>{{::bet.favourite_2_goals_scored}}</td>
+        <td>{{::bet.favourite_2_goals_conceded}}</td>
+        <td>{{::bet.favourite_2_total_cards}}/{{::bet.favourite_2_red_cards}}</td>
+        <td>{{::bet.favourite_2_total_matches}}/{{::bet.favourite_2_won_matches}}/{{::bet.favourite_2_draw_matches}}/{{::bet.favourite_2_lost_matches}}</td>
+        <td>{{::bet.favourite_2_points}}</td>
+      </tr>
+      <tr>
+        <td>OUTSIDER</td>
+        <td><img src='{{::bet.outsider_1_sys_id}}.png' width="15%"> <span>{{::bet.outsider_1}}</span></td>
+        <td>{{::bet.outsider_1_goals_scored}}</td>
+        <td>{{::bet.outsider_1_goals_conceded}}</td>
+        <td>{{::bet.outsider_1_total_cards}}/{{::bet.outsider_1_red_cards}}</td>
+        <td>{{::bet.outsider_1_total_matches}}/{{::bet.outsider_1_won_matches}}/{{::bet.outsider_1_draw_matches}}/{{::bet.outsider_1_lost_matches}}</td>
+        <td>{{::bet.outsider_1_points}}</td>
+      </tr>
+      <tr>
+        <td>OUTSIDER</td>
+        <td><img src='{{::bet.outsider_2_sys_id}}.png' width="15%"> <span>{{::bet.outsider_2}}</span></td>
+        <td>{{::bet.outsider_2_goals_scored}}</td>
+        <td>{{::bet.outsider_2_goals_conceded}}</td>
+        <td>{{::bet.outsider_2_total_cards}}/{{::bet.outsider_2_red_cards}}</td>
+        <td>{{::bet.outsider_2_total_matches}}/{{::bet.outsider_2_won_matches}}/{{::bet.outsider_2_draw_matches}}/{{::bet.outsider_2_lost_matches}}</td>
+        <td>{{::bet.outsider_2_points}}</td>
+      </tr>
+      <tr>
+        <td>UNDERDOGS</td>
+        <td><img src='{{::bet.underdog_1_sys_id}}.png' width="15%"> <span>{{::bet.underdog_1}}</span></td>
+        <td>{{::bet.underdog_1_goals_scored}}</td>
+        <td>{{::bet.underdog_1_goals_conceded}}</td>
+        <td>{{::bet.underdog_1_total_cards}}/{{::bet.underdog_1_red_cards}}</td>
+        <td>{{::bet.underdog_1_total_matches}}/{{::bet.underdog_1_won_matches}}/{{::bet.underdog_1_draw_matches}}/{{::bet.underdog_1_lost_matches}}</td>
+        <td>{{::bet.underdog_1_points}}</td>
+      </tr>
+      <tr>
+        <td>UNDERDOGS</td>
+        <td><img src='{{::bet.underdog_2_sys_id}}.png' width="15%"> <span>{{::bet.underdog_2}}</span></td>
+        <td>{{::bet.underdog_2_goals_scored}}</td>
+        <td>{{::bet.underdog_2_goals_conceded}}</td>
+        <td>{{::bet.underdog_2_total_cards}}/{{::bet.underdog_2_red_cards}}</td>
+        <td>{{::bet.underdog_2_total_matches}}/{{::bet.underdog_2_won_matches}}/{{::bet.underdog_2_draw_matches}}/{{::bet.underdog_2_lost_matches}}</td>
+        <td>{{::bet.underdog_2_points}}</td>
+      </tr>
+      <tr>
+        <td>Lastest Odds</td>
+        <td><img src='{{::bet.latest_odd_1_sys_id}}.png' width="15%"> <span>{{::bet.latest_odd_1}}</span></td>
+        <td>{{::bet.latest_odd_1_goals_scored}}</td>
+        <td>{{::bet.latest_odd_1_goals_conceded}}</td>
+        <td>{{::bet.latest_odd_1_total_cards}}/{{::bet.latest_odd_1_red_cards}}</td>
+        <td>{{::bet.latest_odd_1_total_matches}}/{{::bet.latest_odd_1_won_matches}}/{{::bet.latest_odd_1_draw_matches}}/{{::bet.latest_odd_1_lost_matches}}</td>
+        <td>{{::bet.latest_odd_1_points}}</td>
+      </tr>
+      <tr>
+        <td>Lastest Odds</td>
+        <td><img src='{{::bet.latest_odd_2_sys_id}}.png' width="15%"> <span>{{::bet.latest_odd_2}}</span></td>
+        <td>{{::bet.latest_odd_2_goals_scored}}</td>
+        <td>{{::bet.latest_odd_2_goals_conceded}}</td>
+        <td>{{::bet.latest_odd_2_total_cards}}/{{::bet.latest_odd_2_red_cards}}</td>
+        <td>{{::bet.latest_odd_2_total_matches}}/{{::bet.latest_odd_2_won_matches}}/{{::bet.latest_odd_2_draw_matches}}/{{::bet.latest_odd_2_lost_matches}}</td>
+        <td>{{::bet.latest_odd_2_points}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <hr/>
+  <div class="container col-xs-9">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>BET</th>
+        <th>TEAM</th>
+        <th>STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TOP SCORER TEAM</td>
+        <td><img src='{{::bet.top_scorer_team_sys_id}}.png' width="15%"> <span>{{::bet.top_scorer_team}}</span></td>
+        <td>{{::bet.top_scorer_team_top_scorer_team}}</td>
+      </tr>
+      <tr>
+        <td>LEAST SCORER TEAM</td>
+        <td><img src='{{::bet.least_scorer_team_sys_id}}.png' width="15%"> <span>{{::bet.least_scorer_team}}</span></td>
+        <td>{{::bet.least_scorer_team_least_scorer_team}}</td>
+      </tr>
+      <tr>
+        <td>MOST SCORED TEAM</td>
+        <td><img src='{{::bet.most_scored_team_sys_id}}.png' width="15%"> <span>{{::bet.most_scored_team}}</span></td>
+        <td>{{::bet.most_scored_team_most_scored_team}}</td>
+       
+      </tr>
+      <tr>
+        <td>LEAST SCORED TEAM</td>
+        <td><img src='{{::bet.least_scored_team_sys_id}}.png' width="15%"> <span>{{::bet.least_scored_team}}</span></td>
+        <td>{{::bet.least_scored_team_least_scored_team}}</td>
+      </tr>
+      <tr>
+        <td>TEAM WITH MORE CARDS</td>
+        <td><img src='{{::bet.team_with_more_cards_sys_id}}.png' width="15%"> <span>{{::bet.team_with_more_cards}}</span></td>
+        <td>{{::bet.team_with_more_cards_team_with_more_cards}}</td>
+      </tr>
+      <tr>
+        <td>TEAM WITH LESS CARDS</td>
+        <td><img src='{{::bet.team_with_less_cards_sys_id}}.png' width="15%"> <span>{{::bet.team_with_less_cards}}</span></td>
+        <td>{{::bet.team_with_less_cards_team_with_less_cards}}</td>
+      </tr>
+      <tr>
+        <td>TEAM OF THE TOP SCORER PLAYER</td>
+        <td><img src='{{::bet.team_of_the_top_scorer_player_sys_id}}.png' width="15%"> <span>{{::bet.team_of_the_top_scorer_player}}</span></td>
+        <td>{{::bet.team_of_the_top_scorer_player_team_of_the_top_scorer_player}}</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

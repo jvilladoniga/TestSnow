@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="points_w_d_l" label="Points (W/D/L)" language="en" table="x_13283_mundial_match_points">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>points_w_d_l</element>
+            <help/>
+            <hint/>
+            <label>Points (W/D/L)</label>
+            <language>en</language>
+            <name>x_13283_mundial_match_points</name>
+            <plural>Points (W/D/L)</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-05-16 07:03:49</sys_created_on>
+            <sys_id>13d8f8e20f0653005fe8943be1050ea4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Points (W/D/L)</sys_name>
+            <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+            <sys_update_name>sys_documentation_x_13283_mundial_match_points_points_w_d_l_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-05-16 07:03:49</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

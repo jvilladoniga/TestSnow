@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="sys_user" version="2" view="world_cup">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="User - World cup" name="sys_user" related_list="NULL" sys_domain="global" view="d0b45a860f8613005fe8943be1050ee3">2d85d6c60f8613005fe8943be1050ed3</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>sys_user_has_role.user</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-05-15 00:31:42</sys_created_on>
+            <sys_id>e985d6c60f8613005fe8943be1050ed4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-05-15 00:31:42</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="User - World cup" name="sys_user" related_list="NULL" sys_domain="global" view="d0b45a860f8613005fe8943be1050ee3">2d85d6c60f8613005fe8943be1050ed3</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_13283_mundial_bets.bettor</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-05-15 00:31:42</sys_created_on>
+            <sys_id>6585d6c60f8613005fe8943be1050ed5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-05-15 00:31:42</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>User - World cup</calculated_name>
+            <filter/>
+            <name>sys_user</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-05-15 00:31:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2d85d6c60f8613005fe8943be1050ed3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>User - World cup</sys_name>
+            <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+            <sys_update_name>sys_ui_related_sys_user_world_cup</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-05-15 00:31:42</sys_updated_on>
+            <sys_user/>
+            <view display_value="World cup" name="world_cup">d0b45a860f8613005fe8943be1050ee3</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

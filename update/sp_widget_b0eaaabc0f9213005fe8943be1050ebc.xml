@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $window) {
+  /* widget controller */
+	var bet = $scope.data.bet;
+	if(bet == false){
+		document.location.href = "world_cup?id=sc_cat_item_wc&sys_id=e3b71a4a0f8613005fe8943be1050e52";
+	}
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>wc-redirect-bet</id>
+        <internal>false</internal>
+        <link/>
+        <name>WC Redirect Bet</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.bet = false;
+	if (gs.hasRole('admin')){
+		data.bet = true;
+	}
+  var grBet = new GlideRecord('x_13283_mundial_bets');
+	grBet.addQuery('bettor', gs.getUserID());
+	grBet.query();
+	if(grBet.next()){
+		data.bet = true;
+	}
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-23 15:08:19</sys_created_on>
+        <sys_id>b0eaaabc0f9213005fe8943be1050ebc</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>WC Redirect Bet</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sp_widget_b0eaaabc0f9213005fe8943be1050ebc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-10 14:38:22</sys_updated_on>
+        <template><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">]]></template>
+    </sp_widget>
+</record_update>

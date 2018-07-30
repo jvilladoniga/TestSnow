@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Bets" max_length="40" name="x_13283_mundial_bets" type="collection">
+        <element display="true" label="Bettor" max_length="32" name="bettor" reference="sys_user" reference_qual="vip=true^active=true^EQ" reference_qual_condition="vip=true^active=true^EQ" type="reference"/>
+        <element label="Favourite 1" max_length="32" name="favourite_1" reference="x_13283_mundial_teams" reference_qual="bet_group=3a6bbd860f4613005fe8943be1050ec3^EQ" reference_qual_condition="bet_group=3a6bbd860f4613005fe8943be1050ec3^EQ" type="reference"/>
+        <element label="Favourite 2" max_length="32" name="favourite_2" reference="x_13283_mundial_teams" reference_qual="bet_group=3a6bbd860f4613005fe8943be1050ec3^EQ" reference_qual_condition="bet_group=3a6bbd860f4613005fe8943be1050ec3^EQ" type="reference"/>
+        <element label="Latest odd 1" max_length="32" name="latest_odd_1" reference="x_13283_mundial_teams" reference_qual="bet_group=be2cf9860f4613005fe8943be1050e98^EQ" reference_qual_condition="bet_group=be2cf9860f4613005fe8943be1050e98^EQ" type="reference"/>
+        <element label="Latest odd 2" max_length="32" name="latest_odd_2" reference="x_13283_mundial_teams" reference_qual="bet_group=be2cf9860f4613005fe8943be1050e98^EQ" reference_qual_condition="bet_group=be2cf9860f4613005fe8943be1050e98^EQ" type="reference"/>
+        <element label="Least Scored Team" max_length="32" name="least_scored_team" reference="x_13283_mundial_teams" type="reference"/>
+        <element label="Least Scorer Team" max_length="32" name="least_scorer_team" reference="x_13283_mundial_teams" type="reference"/>
+        <element label="Most Scored Team" max_length="32" name="most_scored_team" reference="x_13283_mundial_teams" type="reference"/>
+        <element label="Outsider 1" max_length="32" name="outsider_1" reference="x_13283_mundial_teams" reference_qual="bet_group=cd0cf9860f4613005fe8943be1050e24^EQ" reference_qual_condition="bet_group=cd0cf9860f4613005fe8943be1050e24^EQ" type="reference"/>
+        <element label="Outsider 2" max_length="32" name="outsider_2" reference="x_13283_mundial_teams" reference_qual="bet_group=cd0cf9860f4613005fe8943be1050e24^EQ" reference_qual_condition="bet_group=cd0cf9860f4613005fe8943be1050e24^EQ" type="reference"/>
+        <element label="Paid" max_length="40" name="paid" type="boolean"/>
+        <element label="Team of the top scorer player" max_length="32" name="team_of_the_top_scorer_player" reference="x_13283_mundial_teams" type="reference"/>
+        <element label="Team with less cards" max_length="32" name="team_with_less_cards" reference="x_13283_mundial_teams" type="reference"/>
+        <element label="Team with more cards" max_length="32" name="team_with_more_cards" reference="x_13283_mundial_teams" type="reference"/>
+        <element label="Top Scorer Team" max_length="32" name="top_scorer_team" reference="x_13283_mundial_teams" type="reference"/>
+        <element default="0" label="Total Points" max_length="20" name="total_points" type="decimal"/>
+        <element label="Underdog 1" max_length="32" name="underdog_1" reference="x_13283_mundial_teams" reference_qual="bet_group=891cbd860f4613005fe8943be1050ec6^EQ" reference_qual_condition="bet_group=891cbd860f4613005fe8943be1050ec6^EQ" type="reference"/>
+        <element label="Underdog 2" max_length="32" name="underdog_2" reference="x_13283_mundial_teams" reference_qual="bet_group=891cbd860f4613005fe8943be1050ec6^EQ" reference_qual_condition="bet_group=891cbd860f4613005fe8943be1050ec6^EQ" type="reference"/>
+        <index name="index">
+            <element name="team_with_less_cards"/>
+        </index>
+        <index name="index2">
+            <element name="team_with_more_cards"/>
+        </index>
+        <index name="index3">
+            <element name="most_scored_team"/>
+        </index>
+        <index name="index4">
+            <element name="bettor"/>
+        </index>
+        <index name="index5">
+            <element name="latest_odd_2"/>
+        </index>
+        <index name="index6">
+            <element name="latest_odd_1"/>
+        </index>
+        <index name="index7">
+            <element name="top_scorer_team"/>
+        </index>
+        <index name="index8">
+            <element name="least_scorer_team"/>
+        </index>
+        <index name="index9">
+            <element name="outsider_1"/>
+        </index>
+        <index name="index10">
+            <element name="outsider_2"/>
+        </index>
+        <index name="index11">
+            <element name="least_scored_team"/>
+        </index>
+        <index name="index12">
+            <element name="team_of_the_top_scorer_player"/>
+        </index>
+        <index name="index13">
+            <element name="underdog_1"/>
+        </index>
+        <index name="index14">
+            <element name="underdog_2"/>
+        </index>
+        <index name="index15">
+            <element name="favourite_1"/>
+        </index>
+        <index name="index16">
+            <element name="favourite_2"/>
+        </index>
+    </element>
+</database>

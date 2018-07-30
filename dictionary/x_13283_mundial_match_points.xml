@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Match Points" max_length="40" name="x_13283_mundial_match_points" type="collection">
+        <element label="Match" max_length="32" name="match" reference="x_13283_mundial_matches" type="reference"/>
+        <element label="Opponent" max_length="32" name="opponent" reference="x_13283_mundial_teams" type="reference"/>
+        <element default="0" label="Points  (+3 goals)" max_length="20" name="points_3_goals" type="decimal"/>
+        <element default="0" label="Points (next phase)" max_length="20" name="points_next_phase" type="decimal"/>
+        <element default="0" label="Points (penalties)" max_length="15" name="points_penalties" type="decimal"/>
+        <element default="0" label="Points (red cards)" max_length="20" name="points_red_cards" type="decimal"/>
+        <element default="0" label="Points (W/D/L)" max_length="20" name="points_w_d_l" type="decimal"/>
+        <element label="Team" max_length="32" name="team" reference="x_13283_mundial_teams" type="reference"/>
+        <element default="0" label="Total Points" max_length="20" name="total_points" type="decimal"/>
+        <index name="index">
+            <element name="opponent"/>
+        </index>
+        <index name="index2">
+            <element name="match"/>
+        </index>
+        <index name="index3">
+            <element name="team"/>
+        </index>
+    </element>
+</database>

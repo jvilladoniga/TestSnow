@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>WC - Reset</name>
+        <run_once>true</run_once>
+        <script><![CDATA[//Remove match points
+var grp = new GlideRecord('x_13283_mundial_match_points');
+grp.query();
+grp.deleteMultiple();
+
+//clean bets
+var grb = new GlideRecord('x_13283_mundial_bets');
+grb.query();
+while (grb.next()){
+	grb.total_points= 0;
+	grb.update();
+}
+
+//clean team poins
+var grt = new GlideRecord('x_13283_mundial_teams');
+grt.query();
+while (grt.next()){
+	grt.draw_matches = 0;
+	grt.goal_difference = 0;
+	grt.goals_conceded = 0;
+	grt.goals_scored = 0;
+	grt.group_points = 0;
+	grt.group_position = 0;
+	grt.least_scored_team = false;
+	grt.least_scorer_team = false;
+	grt.lost_matches = 0;
+	grt.most_scored_team = false;
+	grt.points = 0;
+	grt.red_cards = 0;
+	grt.team_of_the_top_scorer_player = false;
+	grt.team_with_less_cards = false;
+	grt.team_with_more_cards = false;
+	grt.top_scorer_team = false;
+	grt.total_cards = 0;
+	grt.total_matches = 0;
+	grt.won_matches = 0;
+	grt.update();
+}
+
+
+//Clean matches (group phase)
+var grm = new GlideRecord('x_13283_mundial_matches');
+grm.addActiveQuery('phase','!=','1');
+grm.query();
+while (grm.next()){
+	grm.finished = false;
+	grm.penalty_goals_a = 0;
+	grm.penalty_goals_b = 0;
+	grm.red_cards_a = 0;
+	grm.red_cards_b = 0;
+	grm.score_a = 0;
+	grm.score_b = 0;
+	if (grm.phase!="1"){
+		grm.team_a = "";
+		grm.team_b = "";
+	}
+	grm.total_cards_a = 0;
+	grm.total_cards_b = 0;
+	grm.yellow_cards_a = 0;
+	grm.yellow_cards_b = 0;
+	grm.update();
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-21 23:14:58</sys_created_on>
+        <sys_id>76250e9c0f9e13005fe8943be1050efc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>WC - Reset</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sys_script_fix_76250e9c0f9e13005fe8943be1050efc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-21 23:25:32</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

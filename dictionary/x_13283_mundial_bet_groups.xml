@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Bet Groups" max_length="40" name="x_13283_mundial_bet_groups" type="collection">
+        <element default="2" label="Max Teams" max_length="40" name="max_teams" type="integer"/>
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Order" max_length="40" name="order" type="integer"/>
+    </element>
+</database>

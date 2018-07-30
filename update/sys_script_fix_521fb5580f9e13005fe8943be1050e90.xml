@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>WC - calculate all</name>
+        <run_once>true</run_once>
+        <script><![CDATA[//updated stats
+cleanBooleanValues();
+updateStats();
+
+var grt = new GlideRecord('x_13283_mundial_teams');
+var grtAux = new GlideRecord('x_13283_mundial_teams');
+//calculate Top scorer team
+var vMaxGoals = 0;
+grt.initialize();
+grt.orderByDesc('goals_scored_coefficient');
+grt.query();
+while (grt.next()){
+	if (grt.goals_scored_coefficient>=vMaxGoals){
+		grtAux.initialize();
+		if (grtAux.get(grt.sys_id.toString())){
+			vMaxGoals = Number(grt.goals_scored_coefficient);
+			grtAux.top_scorer_team = true;
+			grtAux.update();
+		}
+	} else {break;}
+	}
+	//calculate Least scorer team
+	var vMinGoals = 99;
+	grt.initialize();
+	grt.orderBy('goals_scored_coefficient');
+	grt.query();
+	while (grt.next()){
+		if (vMinGoals>=grt.goals_scored_coefficient){
+			grtAux.initialize();
+			if (grtAux.get(grt.sys_id.toString())){
+				vMinGoals = Number(grt.goals_scored_coefficient);
+				grtAux.least_scorer_team = true;
+				grtAux.update();
+			}
+		} else {break;}
+		}
+		//calculate Most scored team
+		var vMaxGoalsConced = 0;
+		grt.initialize();
+		grt.orderByDesc('goals_conceded_coefficient');
+		grt.query();
+		while (grt.next()){
+			if (grt.goals_conceded_coefficient>=vMaxGoalsConced){
+				grtAux.initialize();
+				if (grtAux.get(grt.sys_id.toString())){
+					vMaxGoalsConced = Number(grt.goals_conceded_coefficient);
+					grtAux.most_scored_team = true;
+					grtAux.update();
+				}
+			} else {break;}
+			}
+			//calculate Least scored team
+			var vMinGoalsConced = 99;
+			grt.initialize();
+			grt.orderBy('goals_conceded_coefficient');
+			grt.query();
+			while (grt.next()){
+				if (vMinGoalsConced>=grt.goals_conceded_coefficient){
+					grtAux.initialize();
+					if (grtAux.get(grt.sys_id.toString())){
+						vMinGoalsConced = Number(grt.goals_conceded_coefficient);
+						grtAux.least_scorer_team = true;
+						grtAux.update();
+					}
+				} else {break;}
+				}
+				//calculate Team with more cards
+				var vMaxCards = 0;
+				grt.initialize();
+				grt.orderByDesc('cards_coefficient');
+				grt.query();
+				while (grt.next()){
+					if (grt.cards_coefficient>=vMaxCards){
+						grtAux.initialize();
+						if (grtAux.get(grt.sys_id.toString())){
+							vMaxCards = Number(grt.cards_coefficient);
+							grtAux.team_with_more_cards = true;
+							grtAux.update();
+						}
+					} else {break;}
+					}
+					//calculate Team with less cards
+					var vMinCards = 99;
+					grt.initialize();
+					grt.orderBy('cards_coefficient');
+					grt.query();
+					while (grt.next()){
+						if (vMinCards>=grt.cards_coefficient){
+							grtAux.initialize();
+							if (grtAux.get(grt.sys_id.toString())){
+								vMinCards = Number(grt.cards_coefficient);
+								grtAux.team_with_less_cards = true;
+								grtAux.update();
+							}
+						} else {break;}
+						}
+						
+						updateBets();
+					
+function updateStats(){
+	//stats
+	var vPoints = 0;
+	var vYellowCards = 0;
+	var vRedCards = 0;
+	var vTotalCards = 0;
+	var vGoalsScored = 0;
+	var vGoalsConceded = 0;
+	var vTotalMatches = 0;
+	var vWonMatches = 0;
+	var vDrawMatches = 0;
+	var vLostMatches = 0;
+	var vGroupPoints = 0;
+	var vPointsPhase = 0;
+	
+	var vOpponent = "";
+	var vPointsM = 0;
+	var vPointsG = 0;
+	var vPointsC = 0;
+	var vPointsP = 0;
+	var vPointsPenal = 0;
+	
+	var gr = new GlideRecord('x_13283_mundial_teams');
+	gr.query();
+	while(gr.next())
+		vPoints = 0;
+	vYellowCards = 0;
+	vRedCards = 0;
+	vTotalCards = 0;
+	vGoalsScored = 0;
+	vGoalsConceded = 0;
+	vTotalMatches = 0;
+	vWonMatches = 0;
+	vDrawMatches = 0;
+	vLostMatches = 0;
+	vGroupPoints = 0;
+	vPointsPhase = 0;
+	//search matches
+	var grm = new GlideRecord('x_13283_mundial_matches');
+	grm.addQuery('team_a',String(gr.sys_id)).addOrCondition('team_b',String(gr.sys_id));
+	grm.addQuery('finished',true);
+	grm.query();
+	while (grm.next()){
+		vPointsM = 0;
+		vPointsG = 0;
+		vPointsC = 0;
+		vPointsP = 0;
+		vPointsPenal = 0;
+		if (grm.team_a == String(gr.sys_id)){
+			vOpponent = String(grm.team_b);
+			vGoalsScored += grm.score_a;
+			vRedCards += grm.red_cards_a;
+			vYellowCards += grm.yellow_cards_a;
+			vPointsC = -Number(grm.red_cards_a)/2;
+			vTotalCards += grm.total_cards_a;
+			vGoalsConceded += grm.score_b;
+			if (grm.phase!="1"){
+				vPointsP =1;
+				vPointsPhase += 1;
+				vPoints +=1;
+			}
+			if (grm.score_a==grm.score_b){
+				vDrawMatches+=1;
+				vPointsM = 1;
+				if (grm.phase!="1"){
+					if (grm.penalty_goals_a	> grm.penalty_goals_b){
+						vPointsPenal = 1;
+						if (grm.phase=="6"){vPointsM +=3;}
+					}
+				}
+			}
+			if (grm.score_a>grm.score_b){
+				vPointsM = 3;
+				vWonMatches+=1;
+				if (grm.phase=="6"){vPointsM +=3;}
+				if (Number(grm.score_a)-Number(grm.score_b)>2){
+					vPointsG = 1;
+					vPoints +=1;
+				}
+			}
+			if (grm.score_a<grm.score_b){
+				vLostMatches+=1;
+				if (Number(grm.score_b)-Number(grm.score_a)>2){
+					vPointsG = -1;
+					vPoints -=1;
+				}
+			}
+		}
+		if (grm.team_b == String(gr.sys_id)){
+			vOpponent = String(grm.team_a);
+			vGoalsScored += grm.score_b;
+			vYellowCards += grm.yellow_cards_b;
+			vRedCards += grm.red_cards_b;
+			vPointsC = -Number(grm.red_cards_b)/2;
+			vTotalCards += grm.total_cards_b;
+			vGoalsConceded += grm.score_a;
+			if (grm.phase!="1"){
+				vPointsP =1;
+				vPointsPhase += 1;
+				vPoints +=1;
+			}
+			if (grm.score_b==grm.score_a){
+				vPointsM = 1;
+				vDrawMatches+=1;
+				if (grm.phase!="1"){
+					if (grm.penalty_goals_b	> grm.penalty_goals_a){
+						vPointsPenal = 1;
+						if (grm.phase=="6"){vPointsM +=3;}
+					}
+				}
+			}
+			if (grm.score_b>grm.score_a){
+				vPointsM = 3;
+				vWonMatches+=1;
+				if (grm.phase=="6"){vPointsM +=3;}
+				if (Number(grm.score_b)-Number(grm.score_a)>2){
+					vPointsG = 1;
+					vPoints +=1;
+				}
+			}
+			if (grm.score_b<grm.score_a){
+				vLostMatches+=1;
+				if (Number(grm.score_a)-Number(grm.score_b)>2){
+					vPointsG = -1;
+					vPoints -=1;
+				}
+			}
+		}
+		
+		//update stats
+		setPoints(grm.sys_id,gr.sys_id,vPointsM,vPointsG,vPointsC,vPointsP,vOpponent);
+		
+		vTotalMatches += 1;
+		
+	}
+	//calculate points
+	vPoints += Number(vWonMatches)*3 + Number(vDrawMatches) - Number(vRedCards)/2;
+	vGroupPoints += Number(vWonMatches)*3 + Number(vDrawMatches);
+	//update stats
+	
+	gr.points = vPoints;
+	gr.red_cards = vRedCards;
+	gr.total_cards = vTotalCards;
+	gr.goals_scored = vGoalsScored;
+	gr.goals_conceded = vGoalsConceded;
+	gr.total_matches = vTotalMatches;
+	gr.goals_scored_coefficient = vGoalsScored / vTotalMatches;
+	gr.goals_conceded_coefficient = vGoalsConceded / vTotalMatches;
+	gr.cards_coefficient = vTotalCards / vTotalMatches;
+	gr.won_matches = vWonMatches;
+	gr.draw_matches = vDrawMatches;
+	gr.lost_matches = vLostMatches;
+	gr.group_points = vGroupPoints;
+	gr.goal_difference = Number(vGoalsScored)-Number(vGoalsConceded);
+	gr.update();
+}
+				
+				
+function setPoints(m,t,p,g,c,s,o){
+	var grpoints = new GlideRecord('x_13283_mundial_match_points');
+	grpoints.addQuery('match',m);
+	grpoints.addQuery('team',t);
+	grpoints.query();
+	if (grpoints.next()){
+		grpoints.opponent = o;
+		grpoints.points_w_d_l = p;
+		grpoints.points_3_goals = g;
+		grpoints.points_red_cards = c;
+		grpoints.points_next_phase = s;
+		grpoints.total_points = p+g+c+s;
+		grpoints.update();
+	} else {
+		grpoints.initialize();
+		grpoints.opponent = o;
+		grpoints.match = m;
+		grpoints.team = t;
+		grpoints.points_w_d_l = p;
+		grpoints.points_3_goals = g;
+		grpoints.points_red_cards = c;
+		grpoints.points_next_phase = s;
+		grpoints.total_points = p+g+c+s;
+		grpoints.insert();
+	}
+}
+				
+				
+										
+function updateBets(){
+	var points = 0;
+	var grg = new GlideRecord('x_13283_mundial_teams');
+	var grbets = new GlideRecord('x_13283_mundial_bets');
+	grbets.query();
+	while (grbets.next()){
+		points = 0;
+		grg.initialize();
+		grg.addQuery("sys_id",grbets.favourite_1).addOrCondition("sys_id",grbets.favourite_2).addOrCondition("sys_id",grbets.latest_odd_1).addOrCondition("sys_id",grbets.latest_odd_2).addOrCondition("sys_id",grbets.outsider_1).addOrCondition("sys_id",grbets.outsider_2).addOrCondition("sys_id",grbets.underdog_1).addOrCondition("sys_id",grbets.underdog_2);
+		grg.query();
+		while (grg.next()){
+			points += grg.points;
+			if (grg.top_scorer_team){points+=2;}
+			if (grg.least_scorer_team){points+=2;}
+			if (grg.most_scored_team){points+=2;}
+			if (grg.least_scored_team){points+=2;}
+			if (grg.team_with_more_cards){points+=2;}
+			if (grg.team_of_the_top_scorer_player){points+=2;}
+			if (grg.team_with_less_cards){points+=2;}
+		}
+		grbets.total_points = points;
+		grbets.update();
+	}
+}
+
+function cleanBooleanValues(){
+	var grt = new GlideRecord('x_13283_mundial_teams');
+	grt.query();
+	while (grt.next()){
+		grt.top_scorer_team = false;
+		grt.least_scorer_team = false;
+		grt.most_scored_team = false;
+		grt.least_scored_team = false;
+		grt.team_with_more_cards = false;
+		grt.team_of_the_top_scorer_player = false;
+		grt.update();
+	}
+}
+																]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-21 22:40:03</sys_created_on>
+        <sys_id>521fb5580f9e13005fe8943be1050e90</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>WC - calculate all</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sys_script_fix_521fb5580f9e13005fe8943be1050e90</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-01 08:07:09</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

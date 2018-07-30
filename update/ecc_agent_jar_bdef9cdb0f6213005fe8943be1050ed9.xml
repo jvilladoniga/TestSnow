@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="ecc_agent_jar">
+    <ecc_agent_jar action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <directory>false</directory>
+        <name>prueba</name>
+        <parent/>
+        <source/>
+        <sys_class_name>ecc_agent_jar</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-12 09:42:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bdef9cdb0f6213005fe8943be1050ed9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>prueba</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>ecc_agent_jar_bdef9cdb0f6213005fe8943be1050ed9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-12 09:42:13</sys_updated_on>
+        <version/>
+    </ecc_agent_jar>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>application/octet-stream</content_type>
+        <encryption_context/>
+        <file_name>jarcredential.jar</file_name>
+        <image_height/>
+        <image_width/>
+        <size_bytes>5152</size_bytes>
+        <size_compressed>1543</size_compressed>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-12 09:42:04</sys_created_on>
+        <sys_id>a000201f0f6213005fe8943be1050ef5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-12 09:42:04</sys_updated_on>
+        <table_name>ecc_agent_jar</table_name>
+        <table_sys_id>bdef9cdb0f6213005fe8943be1050ed9</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="jarcredential.jar" sys_id="a000201f0f6213005fe8943be1050ef5">a000201f0f6213005fe8943be1050ef5</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-12 09:42:04</sys_created_on>
+        <sys_id>e000201f0f6213005fe8943be1050ef5</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2044</length>
+        <position>1</position>
+        <sys_attachment display_value="jarcredential.jar" sys_id="a000201f0f6213005fe8943be1050ef5">a000201f0f6213005fe8943be1050ef5</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-12 09:42:04</sys_created_on>
+        <sys_id>6400201f0f6213005fe8943be1050ef5</sys_id>
+    </sys_attachment_doc>
+</record_update>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>3</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">6824c7280f5a53005fe8943be1050e99</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-22 22:29:15</sys_created_on>
+        <sys_id>f936c7680f5a53005fe8943be1050e0a</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sp_instance_f936c7680f5a53005fe8943be1050e0a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-29 16:06:54</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<hr />\n<div style=\"color: white;\">\n<p style=\"font-size: 1.2em;\">If you do not yet have a user account you can request one clicking on&nbsp;<a style=\"color: #90f2ef; text-decoration: none;\" href=\"user_registration_request.do?sys_id=-1&amp;sys_is_list=true&amp;sys_target=user_registration_request&amp;sysparm_checked_items=&amp;sysparm_fixed_query=&amp;sysparm_group_sort=&amp;sysparm_list_css=&amp;sysparm_query=state%3dpending&amp;sysparm_referring_url=user_registration_request_list.do%3fsysparm_query%3dstate%253Dpending%255EEQ%4099%40sysparm_clear_stack%3dtrue&amp;sysparm_target=&amp;sysparm_view=\" rel=\"nofollow\"><strong>here</strong></a>.<br /><br /></p>\n</div>",
+		"displayValue": "<hr />\n<div style=\"color: white;\">\n<p style=\"font-size: 1.2em;\">If you do not yet have a user account you can request one clicking on&nbsp;<a style=\"color: #90f2ef; text-decoration: none;\" href=\"user_registration_request.do?sys_id=-1&amp;sys_is_list=true&amp;sys_target=user_registration_request&amp;sysparm_checked_items=&amp;sysparm_fixed_query=&amp;sysparm_group_sort=&amp;sysparm_list_css=&amp;sysparm_query=state%3dpending&amp;sysparm_referring_url=user_registration_request_list.do%3fsysparm_query%3dstate%253Dpending%255EEQ%4099%40sysparm_clear_stack%3dtrue&amp;sysparm_target=&amp;sysparm_view=\" rel=\"nofollow\"><strong>here</strong></a>.<br /><br /></p>\n</div>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=f936c7680f5a53005fe8943be1050e0a"/>
+</record_update>

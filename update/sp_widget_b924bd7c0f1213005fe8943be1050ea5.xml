@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>semi-finals</id>
+        <internal>false</internal>
+        <link/>
+        <name>WC Semi Finals</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	var vData = [];
+	var grMatch = new GlideRecord('x_13283_mundial_matches');
+	grMatch.addQuery('phase','4');
+	grMatch.orderBy('number');
+	grMatch.query();
+	while(grMatch.next()){
+		var vMatch = {};
+			if (grMatch.team_a!=""){
+				vMatch.team_a = grMatch.team_a.name.toString();
+				vMatch.a_sys_id = grMatch.team_a.toString();
+			} else {
+				vMatch.team_a = String(grMatch.details).split("VS")[0];
+				vMatch.a_sys_id = "0";
+			}
+			if (grMatch.team_b!=""){
+				vMatch.team_b = grMatch.team_b.name.toString();
+				vMatch.b_sys_id = grMatch.team_b.toString();
+			} else {
+				vMatch.team_b = String(grMatch.details).split("VS")[1];
+				vMatch.b_sys_id = "0";
+			}
+			if(grMatch.finished){
+				vMatch.finished = true;
+				vMatch.score_a = grMatch.score_a.toString();
+				vMatch.score_b = grMatch.score_b.toString();
+				vMatch.yellow_cards_a = grMatch.yellow_cards_a.toString();
+				vMatch.yellow_cards_b = grMatch.yellow_cards_b.toString();
+				vMatch.red_cards_a = grMatch.red_cards_a.toString();
+				vMatch.red_cards_b = grMatch.red_cards_b.toString();
+			} else {
+				vMatch.finished = false;
+				vMatch.schedule = grMatch.schedule.toString();
+			}
+			vData.push(vMatch);
+		}
+		data.matches = vData;
+		
+	})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-23 11:09:11</sys_created_on>
+        <sys_id>b924bd7c0f1213005fe8943be1050ea5</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>WC Semi Finals</sys_name>
+        <sys_package display_value="Mundial" source="x_13283_mundial">08a5f9020f4613005fe8943be1050ea0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mundial">08a5f9020f4613005fe8943be1050ea0</sys_scope>
+        <sys_update_name>sp_widget_b924bd7c0f1213005fe8943be1050ea5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-04 21:35:31</sys_updated_on>
+        <template><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-card-4 w3-margin">
+  <header id='groupMenu' class="w3-container w3-blue w3-center" onmouseover="" style="cursor: pointer;">
+    <h2 onclick="myFunction('collapseSF')">SEMI FINALS</h2>
+  </header>
+  <div id="collapseSF" class="w3-container w3-hide">
+    <div ng-repeat="match in data.matches">
+ 
+      <div class="w3-container w3-margin-top w3-margin-bottom">
+      <div class="w3-third w3-center">
+        <div ng-if="::match.a_sys_id!=0"><img src='{{::match.a_sys_id}}.png' width="20%"></div>
+        <div>{{::match.team_a}}</div>
+      </div>
+      <div class="w3-third w3-center">
+       <div ng-if="::match.finished==true">
+        <div class="w3-panel w3-sand"><span>{{::match.score_a}}</span> - <span>{{::match.score_b}}</span></div>
+        <div>
+          <div class="col-xs-6">
+            <div><img src="yellowcard.png" width="20%"/>: {{::match.yellow_cards_a}}</div>
+            <div><img src="redcard.png" width="20%"/>: {{::match.red_cards_a}}</div>
+          </div>
+          <div class="col-xs-6">
+            <div><img src="yellowcard.png" width="20%"/>: {{::match.yellow_cards_b}}</div>
+            <div><img src="redcard.png" width="20%"/>: {{::match.red_cards_b}}</div>
+          </div>
+        </div>
+         
+       </div>
+       <div ng-if="::match.finished==false">
+        <span>{{::match.schedule}}</span>
+       </div>
+      </div>
+      <div class="w3-third w3-center">
+        <div ng-if="::match.b_sys_id!=0"><img src='{{::match.b_sys_id}}.png' width="20%"></div>
+       <div>{{::match.team_b}}</div>
+      </div>
+    </div><hr/>
+      
+  </div> 
+ </div>
+</div>
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}]]></template>
+    </sp_widget>
+</record_update>

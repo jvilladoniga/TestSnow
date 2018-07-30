@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Matches" max_length="40" name="x_13283_mundial_matches" type="collection">
+        <element display="true" label="Details" max_length="100" name="details" type="string"/>
+        <element label="Finished" max_length="40" name="finished" type="boolean"/>
+        <element label="NextMatch" max_length="32" name="nextmatch" reference="x_13283_mundial_matches" type="reference"/>
+        <element label="Number" max_length="40" name="number" type="integer"/>
+        <element label="Penalty goals A" max_length="40" name="penalty_goals_a" type="integer"/>
+        <element label="Penalty goals B" max_length="40" name="penalty_goals_b" type="integer"/>
+        <element choice="1" label="Phase" max_length="40" name="phase" type="choice">
+            <choice>
+                <element label="Group Phase" sequence="0" value="1"/>
+                <element label="Round of 16" sequence="1" value="2"/>
+                <element label="Quarter-finals" sequence="2" value="3"/>
+                <element label="Semi-finals" sequence="3" value="4"/>
+                <element label="Play-off for third place" sequence="4" value="5"/>
+                <element label="Final" sequence="5" value="6"/>
+            </choice>
+        </element>
+        <element default="0" label="Red Cards A" max_length="40" name="red_cards_a" type="integer"/>
+        <element default="0" label="Red Cards B" max_length="40" name="red_cards_b" type="integer"/>
+        <element label="Schedule" max_length="40" name="schedule" type="glide_date_time"/>
+        <element default="0" label="Score A" max_length="40" name="score_a" type="integer"/>
+        <element default="0" label="Score B" max_length="40" name="score_b" type="integer"/>
+        <element label="Team A" max_length="32" name="team_a" reference="x_13283_mundial_teams" type="reference"/>
+        <element label="Team B" max_length="32" name="team_b" reference="x_13283_mundial_teams" type="reference"/>
+        <element default="0" label="Total Cards A" max_length="40" name="total_cards_a" type="integer"/>
+        <element default="0" label="Total Cards B" max_length="40" name="total_cards_b" type="integer"/>
+        <element default="0" label="Yellow Cards A" max_length="40" name="yellow_cards_a" type="integer"/>
+        <element default="0" label="Yellow Cards B" max_length="40" name="yellow_cards_b" type="integer"/>
+        <index name="index">
+            <element name="team_a"/>
+        </index>
+        <index name="index2">
+            <element name="nextmatch"/>
+        </index>
+        <index name="index3">
+            <element name="team_b"/>
+        </index>
+    </element>
+</database>
